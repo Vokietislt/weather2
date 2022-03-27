@@ -18,6 +18,8 @@ const App = () => {
     fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}&units=metric`)
       .then(res => res.json())
       .then(json => {
+
+        //informacijos sudeliojimas Gavus API
         console.log(json);
         setWeather(json.weather[0].main)
         setTempreture(json.main.temp)
@@ -40,7 +42,6 @@ const App = () => {
       }
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
-      console.log(location)
       // fetchWeather(API_KEY, location.coords.latitude, location.coords.longitude)
     })();
   }, []);
@@ -49,7 +50,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       {isLoading ? <Text>{errorMsg}</Text> :
-        <Weather weather={weatherCondition} temperature={temperature} name={name} data={allData} />}
+        <Weather weather={ } temperature={ } name={ } data={ } />}
     </View>
   );
 }

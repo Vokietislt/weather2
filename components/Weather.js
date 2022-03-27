@@ -6,35 +6,8 @@ import { weatherConditions } from './weatherConditions';
 
 const Weather = ({ weather, temperature, name, data }) => {
   return (
-    <View
-      style={[
-        styles.weatherContainer,
-        { backgroundColor: weatherConditions[weather].color }
-      ]}
-    >
-      <View style={styles.headerContainer}>
-        <MaterialCommunityIcons
-          size={72}
-          name={weatherConditions[weather].icon}
-          color={'#fff'}
-        />
-        <Text style={styles.tempText}>{temperature}˚</Text>
-      </View>
-      <View style={styles.headerContainer}>
-        <Text style={styles.nameText}>{data.name}</Text>
-      </View>
-      <View style={styles.bodyContainer}>
-        <Text style={styles.title}>Wind speed</Text>
-        <Text style={styles.subtitle}>
-          {data.wind ? data.wind.speed : 'loading'}
-        </Text>
-      </View>
-      <View style={styles.bodyContainer}>
-        <Text style={styles.title}>{weatherConditions[weather].title}</Text>
-        <Text style={styles.subtitle}>
-          {weatherConditions[weather].subtitle}
-        </Text>
-      </View>
+    <View >
+
     </View>
   );
 };
